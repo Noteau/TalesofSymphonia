@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ecran_accueil"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#FAFA">
+
+    <Button
+        android:id="@+id/Crédits_back"
+        android:layout_width="100dp"
+        android:layout_height="66dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="Retour"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginStart="10sp"
+        android:contentDescription="@string/go_back_to_the_main_menu"/>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Crédits_back"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/credits"
+            android:textSize="25sp"
+            android:gravity="center" />
+    </ScrollView>
+
+</RelativeLayout>

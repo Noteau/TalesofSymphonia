@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".Ecran_accueil"
+    android:background="#FAFA"
+    >
+    <LinearLayout
+        android:id="@+id/HUD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#e82c0b"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Vos points de vie (la quantité de coups que vous pouvez subir)"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#90990f"
+                android:text="Vote monnaie" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#0400ff"
+                android:text="Votre mana (utile pour les sorts)"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Votre classe (c'est la manière dont vous gerez les situations complexes)"
+                android:layout_weight="1"
+                android:gravity="center"/>
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#000" />
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/Game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/HUD"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Le résumé de ce qui se passe autour de vous :\n-est ce que vos alliés ont appréciés votre précédante décisions ?\n-Est ce que des ennemis sont présents ?\n-Quelles sont les conséquences de vos actions ?" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Ici apparaissent"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Les différents choix possibles/activités"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Que peut faire votre personnage"/>
+        </LinearLayout>
+
+    </ScrollView>
+    <Button
+        android:id="@+id/inventaire"
+        android:layout_below="@id/Game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ici \nvous \navez \naccés\n à\n votre inventaire"
+        android:textSize="10dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/Help_back"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/inventaire"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Retour au jeu"/>
+</RelativeLayout>
